@@ -25,7 +25,7 @@ def insert(root, new_value) -> BinaryTreeNode:
         else:
             if root.right_child is None:
                 new_node = BinaryTreeNode(new_value)
-                root.left_child = new_node
+                root.right_child = new_node
             else:
                 insert(root.right_child,new_value)
 
