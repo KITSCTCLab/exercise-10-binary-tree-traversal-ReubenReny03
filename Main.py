@@ -1,4 +1,10 @@
 class BinaryTreeNode:
+    """
+    Binary Tree has 3 attributes
+    data -> to store the data
+    left_child -> to set element to left
+    right_child -> to set element to right
+    """
     def __init__(self, data):
         self.data = data
         self.left_child = None
@@ -30,6 +36,10 @@ def insert(root, new_value) -> BinaryTreeNode:
                 insert(root.right_child,new_value)
 
 def inorder(root) -> None:
+    """
+    to print in the order
+    left mid right
+    """
     if root:
         inorder(root.left_child)
         print(root.data, end = " ")
@@ -37,6 +47,10 @@ def inorder(root) -> None:
 
 
 def preorder(root) -> None:
+    """
+    to print in the order
+    mid left right
+    """
     if root:
         print(root.data, end = " ")
         preorder(root.left_child)
@@ -44,6 +58,10 @@ def preorder(root) -> None:
 
 
 def postorder(root) -> None:
+    """
+    to print in the order
+    left right left
+    """
     if root:
         postorder(root.left_child)
         postorder(root.right_child)
